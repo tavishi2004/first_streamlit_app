@@ -28,7 +28,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 # New sectuion to display Fruityvice Api Response
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit choice)
 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # Display the table on the page
