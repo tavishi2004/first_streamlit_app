@@ -37,8 +37,7 @@ try:
     # New section to display Fruityvice Api Response
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-    # Display the table on the page
-  streamlit.dataframe(fruityvice_normalized)
+    streamlit.dataframe(fruityvice_normalized)
 
 except URLError as e:
   streamlit.error()
